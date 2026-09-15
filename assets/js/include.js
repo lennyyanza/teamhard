@@ -107,6 +107,27 @@
       if (target === '#site-header') setupNavigation(container);
     } catch (error) { showError(container, error); }
   }
+  /* Offer a pause control for the decorative hero; reduced motion stays static. */
+  function setupHeroMotion() {
+    const hero = document.querySelector('.hero');
+    const button = hero?.querySelector('.motion-toggle');
+    if (!button) return;
+    const preference = matchMedia('(prefers-reduced-motion: reduce)');
+    let paused = false;
+
+    /* Synchronize the control with both the visitor choice and OS preference. */
+    function updateMotion() {
+      button.hidden = preference.matches;
+      hero.classList.toggle('motion-ready', !preference.matches);
+      hero.classList.toggle('motion-paused', paused);
+      button.textContent = paused ? 'Resume motion' : 'Pause motion';
+      button.setAttribute('aria-label', paused ? 'Resume background animation' : 'Pause background animation');
+    }
+    button.addEventListener('click', () => { paused = !paused; updateMotion(); });
+    preference.addEventListener('change', updateMotion);
+    updateMotion();
+  }
+  setupHeroMotion();
   includePartial('#site-header', 'partials/header.html');
   includePartial('#site-footer', 'partials/footer.html');
 })();

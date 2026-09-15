@@ -113,7 +113,7 @@ Subsystem text preserves the team’s provided research architecture. Validate c
 
 Open `assets/css/theme.css`. The first palette tokens define the canvas, surface, text, muted text, accent, rules, and navigation. Separate hero palette tokens keep its dark art direction legible in light mode. Font sizes, spacing, control sizes, radii, and motion durations also live here. The `prefers-color-scheme: light` block overrides only tokens; no duplicate component styles are needed.
 
-Keep normal text at least 4.5:1 contrast against its background (3:1 for large text). Keyboard focus uses the accent token. Statuses also have words, so they do not depend on color. All animations and reveals stop under the visitor’s reduced-motion setting. The 768px navigation breakpoint is shared by `main.css` and `include.js`; change both together because CSS variables cannot be used in media-query conditions.
+Keep normal text at least 4.5:1 contrast against its background (3:1 for large text). Keyboard focus uses the accent token. Statuses also have words, so they do not depend on color. All animations and reveals stop under the visitor’s reduced-motion setting. The hero also has a Pause motion control, and stays static if JavaScript is disabled. The 768px navigation breakpoint is shared by `main.css` and `include.js`; change both together because CSS variables cannot be used in media-query conditions.
 
 ## Replace the hero with a video or photo
 
