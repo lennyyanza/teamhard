@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" fill="none">
+  <g stroke="#4da6ff" stroke-width="1" opacity=".6" transform="rotate(-24 420 350)">
+    <ellipse cx="420" cy="360" rx="280" ry="90" stroke-dasharray="4 12"/>
+    <ellipse cx="420" cy="360" rx="220" ry="68"/>
+    <path d="M420 70 466 172 458 470 420 562 382 470 374 172Z M420 70V562 M374 172 420 195 466 172 M382 470 420 453 458 470 M382 280 180 350 180 382 388 345 M458 280 660 350 660 382 452 345 M180 350 420 328 660 350 M180 382 420 364 660 382 M382 445 300 524 420 492 540 524 458 445"/>
+    <ellipse cx="420" cy="172" rx="46" ry="14"/><ellipse cx="420" cy="240" rx="43" ry="14"/><ellipse cx="420" cy="310" rx="40" ry="14"/><ellipse cx="420" cy="382" rx="39" ry="14"/><ellipse cx="420" cy="450" rx="38" ry="14"/>
+    <path d="M110 360H730 M420 30V620 M720 130V550 M708 130H732 M708 550H732" stroke-dasharray="5 9"/>
+  </g>
+  <g fill="#b7c8d9" font-family="monospace" font-size="12"><text x="605" y="115">CONCEPT / 001</text><text x="605" y="136">NOT TO SCALE</text><text x="620" y="605">AIR ↔ WATER</text></g>
+</svg>

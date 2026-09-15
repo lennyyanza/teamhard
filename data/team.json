@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Lenny Yanza",
+    "role": "Electrical Engineering",
+    "focus": "Power, motor drive, and propulsion electronics",
+    "bio": "Power, motor drive, and propulsion electronics.",
+    "photo": "assets/img/team/lenny-yanza.svg",
+    "linkedin": "https://www.linkedin.com/in/lennyyanza/",
+    "draft": true
+  },
+  {
+    "name": "Robert Savely",
+    "role": "Computer Engineering",
+    "focus": "Flight control firmware and simulation pipeline",
+    "bio": "Flight control firmware and simulation pipeline.",
+    "photo": "assets/img/team/robert-savely.svg",
+    "linkedin": "https://www.linkedin.com/in/robertsavely/",
+    "draft": true
+  },
+  {
+    "name": "XiangXi \"Mall\" Wang",
+    "role": "Computer Engineering",
+    "focus": "Onboard compute, FPGA inference, and autonomy",
+    "bio": "Onboard compute, FPGA inference, and autonomy.",
+    "photo": "assets/img/team/xiangxi-wang.svg",
+    "linkedin": "https://www.linkedin.com/in/xiangxi-wang/",
+    "draft": true
+  },
+  {
+    "name": "Cooper Poggioli",
+    "role": "Engineering Management",
+    "focus": "Project management, sponsorship, and sourcing",
+    "bio": "Project management, sponsorship, and sourcing.",
+    "photo": "assets/img/team/cooper-poggioli.svg",
+    "linkedin": "https://www.linkedin.com/in/cooper-poggioli-b00a44292/",
+    "draft": true
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "airframe",
+    "title": "Airframe & Structure",
+    "summary": "Tail-sitter geometry, vertical at launch.",
+    "details": [
+      "FDM-printed PETG or nylon for early hull and frame iterations for fast turnaround; migration to CNC-cut carbon fiber sheet or wound-tube frame once geometry is locked, for flight-weight parts with long fatigue life."
+    ]
+  },
+  {
+    "id": "propulsion",
+    "title": "Dual-Mode Propulsion",
+    "summary": "One motor. Two drive paths.",
+    "details": [
+      "Dual-path gearbox concept — 12.7:1 reduction on the underwater path, direct drive on the aerial path, selected by motor direction, so the propeller never reverses.",
+      "Waterproof brushless motors (marine-rated 2307.5-class). Blue Robotics T200 flooded-brushless thrusters as a COTS benchmark and sourced-thruster fallback.",
+      "Thrust vectoring under evaluation as an alternative to differential thrust in water mode. The air/water drive interface is identified as the most failure-prone mechanical joint on this class of vehicle."
+    ]
+  },
+  {
+    "id": "control",
+    "title": "Flight & Dive Control",
+    "summary": "A shared controller across both media.",
+    "details": [
+      "Pixhawk-class controller (Cube Orange or Pixhawk 6X) running PX4. Cascaded PID — attitude to rate to motor mixer — as the baseline before any learned control.",
+      "PX4’s uuv_pos_control and uuv_att_control modules only cover multirotor underwater control, so a tail-sitter requires a custom airframe definition plus a hand-written mode-switch controller.",
+      "ArduSub retained as a fallback for depth-hold logic."
+    ]
+  },
+  {
+    "id": "compute",
+    "title": "Onboard Compute & Autonomy",
+    "summary": "Responsive behavior, computed onboard.",
+    "details": [
+      "AMD/Xilinx Kria KV260 (Zynq UltraScale+ MPSoC with built-in DPU), targeting sub-20 ms onboard vision inference under 10 W.",
+      "NVIDIA Jetson Orin Nano as a backup path so autonomy work is never blocked on FPGA toolchain bring-up. ROS 2 for the sensor and autonomy pipeline, bridged via MAVROS or px4_ros_com."
+    ]
+  },
+  {
+    "id": "sealing",
+    "title": "Waterproofing & Sealing",
+    "summary": "A watertight core, designed for iteration.",
+    "details": [
+      "UV-cure conformal coating on all boards (roughly 15 minute cure versus about 24 hours for silicone, which matters at iteration speed). Fully potted ESCs.",
+      "IP67/IP68 target for the flight controller and compute enclosure. Marine-grade wet-mate connectors at every water-crossing seam."
+    ]
+  },
+  {
+    "id": "communications",
+    "title": "Communications",
+    "summary": "Surface to reconnect.",
+    "details": [
+      "Published depth limits set the constraint: roughly 1.5 m for a 900 MHz RC link and roughly 2 m for 433 MHz telemetry — both effectively near-surface only.",
+      "Mission design therefore assumes periodic surfacing for RF check-in. A low-bandwidth acoustic modem is held as an option if sustained deep operation becomes a requirement."
+    ]
+  },
+  {
+    "id": "simulation",
+    "title": "Simulation & Validation",
+    "summary": "Validate the model. Then build.",
+    "details": [
+      "SolidWorks for CAD and per-sub-assembly mass properties → Simscape Multibody for rigid-body dynamics → Simulink for control design → SolidWorks Flow Simulation for fast early aero sweeps → OpenFOAM interFoam (Volume-of-Fluid) or ANSYS Fluent for the water-entry/exit transient → PX4 SITL + Gazebo for full-vehicle SITL → hardware-in-the-loop with a real Pixhawk → bench test of the propulsion mechanism → pool test → open water."
+    ]
+  }
+]

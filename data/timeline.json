@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-09",
+    "period": "Fall 2026",
+    "title": "Research foundation",
+    "description": "Team formed, problem scoped, precedent research complete.",
+    "status": "complete",
+    "draft": true
+  },
+  {
+    "date": "2026-09",
+    "period": "Fall 2026",
+    "title": "Define the vehicle model",
+    "description": "Lock mass and inertia budget in SolidWorks; import to Simscape Multibody.",
+    "status": "in-progress",
+    "draft": true
+  },
+  {
+    "date": "2026-09",
+    "period": "Fall 2026",
+    "title": "Build the simulation environment",
+    "description": "Stand up PX4 SITL + Gazebo with custom tail-sitter airframe and submersion flag.",
+    "status": "in-progress",
+    "draft": true
+  },
+  {
+    "date": "2026-12",
+    "period": "Winter 2026",
+    "title": "Characterize the flow",
+    "description": "First CFD pass for Cd/Cl/Cm sweeps; feed coefficients into Simulink.",
+    "status": "planned",
+    "draft": true
+  },
+  {
+    "date": "2027-03",
+    "period": "Spring 2027",
+    "title": "Prove the propulsion mechanism",
+    "description": "Bench prototype of dual-mode propulsion, validate thrust against CFD.",
+    "status": "planned",
+    "draft": true
+  },
+  {
+    "date": "2027-03",
+    "period": "Spring 2027",
+    "title": "Move from model to water",
+    "description": "Hardware-in-the-loop, then pool test of propulsion and waterproofing.",
+    "status": "planned",
+    "draft": true
+  },
+  {
+    "date": "2027-03",
+    "period": "Spring 2027",
+    "title": "Integrate and demonstrate",
+    "description": "Integrate FPGA compute; full-vehicle demonstration.",
+    "status": "planned",
+    "draft": true
+  }
+]
