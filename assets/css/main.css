@@ -134,3 +134,9 @@ body.modal-open { overflow: hidden; }
 .hero.motion-paused .hero-mesh, .hero.motion-paused .hero-wireframe { animation-play-state: paused; }
 .motion-toggle { color: var(--hero-muted); background: var(--transparent); border: var(--zero); padding: var(--zero); min-height: var(--control-size); font-size: var(--text-sm); text-decoration: underline; text-underline-offset: var(--space-1); }
 .hero-meta { align-items: center; }
+
+/* Keep links and keyboard focus legible over the dark hero in either palette. */
+.home .site-header:not(.is-scrolled):not(.menu-open) .brand span,
+.home .site-header:not(.is-scrolled):not(.menu-open) .nav-links a[aria-current] { color: var(--hero-accent); }
+.hero :focus-visible,
+.home .site-header:not(.is-scrolled):not(.menu-open) :focus-visible { outline-color: var(--hero-accent); }
