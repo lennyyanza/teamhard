@@ -2,8 +2,8 @@
 
 A public project website for Engineering Design VII, Department of Electrical and Computer Engineering, Stevens Institute of Technology, Class of 2027. Research and concept phase, Fall 2026. No advisor or sponsor is confirmed yet.
 
-**Website:** https://lennyyanza.github.io/hard-drone/  
-**Repository:** https://github.com/lennyyanza/hard-drone
+**Website:** https://lennyyanza.github.io/teamhard/<br>
+**Repository:** https://github.com/lennyyanza/teamhard
 
 ## Start here: preview on your computer
 
@@ -139,9 +139,9 @@ This repository is public. In **Settings → Pages**, the source is **Deploy fro
 
 After a commit reaches `main`, GitHub runs its Pages deployment. Check the repository’s **Actions** tab or **Settings → Pages** for status. The live address is:
 
-https://lennyyanza.github.io/hard-drone/
+https://lennyyanza.github.io/teamhard/
 
-All local references are relative so the `/hard-drone/` project path works. If the owner or repository name changes, update canonical and Open Graph URLs in each HTML file and the repository links in the footer and contact page.
+All local references are relative so the `/teamhard/` project path works. If the owner or repository name changes, update canonical and Open Graph URLs in each HTML file and the repository links in the footer and contact page.
 
 ## Before publishing an update
 
