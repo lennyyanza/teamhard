@@ -2,48 +2,48 @@
   {
     "date": "2026-09",
     "period": "Fall 2026",
-    "title": "Research foundation",
-    "description": "Team formed, problem scoped, precedent research complete.",
+    "title": "Define the project",
+    "description": "Set the project scope, review precedent vehicles, and establish initial requirements.",
     "status": "complete",
     "draft": true
   },
   {
     "date": "2026-09",
     "period": "Fall 2026",
-    "title": "Define the vehicle model",
-    "description": "Lock mass and inertia budget in SolidWorks; import to Simscape Multibody.",
+    "title": "Design the drone body",
+    "description": "Develop and compare body concepts for flight, underwater movement, and 3D printing.",
     "status": "in-progress",
     "draft": true
   },
   {
     "date": "2026-09",
     "period": "Fall 2026",
-    "title": "Build the simulation environment",
-    "description": "Stand up PX4 SITL + Gazebo with custom tail-sitter airframe and submersion flag.",
+    "title": "Select motors and propellers",
+    "description": "Evaluate waterproof motors and propellers for the expected air and water operating conditions.",
     "status": "in-progress",
     "draft": true
   },
   {
     "date": "2026-12",
     "period": "Winter 2026",
-    "title": "Characterize the flow",
-    "description": "First CFD pass for Cd/Cl/Cm sweeps; feed coefficients into Simulink.",
+    "title": "Simulate thrust and stability",
+    "description": "Use simulation to estimate thrust, balance, and basic vehicle behavior in both environments.",
     "status": "planned",
     "draft": true
   },
   {
     "date": "2027-03",
     "period": "Spring 2027",
-    "title": "Prove the propulsion mechanism",
-    "description": "Bench prototype of dual-mode propulsion, validate thrust against CFD.",
+    "title": "Build the first prototype",
+    "description": "Print the body, assemble the propulsion system, and prepare the electronics for testing.",
     "status": "planned",
     "draft": true
   },
   {
     "date": "2027-03",
     "period": "Spring 2027",
-    "title": "Move from model to water",
-    "description": "Hardware-in-the-loop, then pool test of propulsion and waterproofing.",
+    "title": "Bench and water testing",
+    "description": "Measure thrust, check waterproofing, and test controlled operation in water.",
     "status": "planned",
     "draft": true
   },
@@ -51,7 +51,7 @@
     "date": "2027-03",
     "period": "Spring 2027",
     "title": "Integrate and demonstrate",
-    "description": "Integrate FPGA compute; full-vehicle demonstration.",
+    "description": "Integrate controls and FPGA functionality, then demonstrate the complete vehicle.",
     "status": "planned",
     "draft": true
   }

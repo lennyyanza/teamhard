@@ -1,4 +1,4 @@
-# HARD — High-Speed Amphibious Responsive Drone
+# HARD — High-speed Amphibious Responsive Drone
 
 A public project website for Engineering Design VII, Department of Electrical and Computer Engineering, Stevens Institute of Technology, Class of 2027. Research and concept phase, Fall 2026. No advisor or sponsor is confirmed yet.
 

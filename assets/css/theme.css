@@ -1,42 +1,43 @@
 /* Palette: edit these semantic colors to restyle the entire site. */
 :root {
   color-scheme: dark;
-  --canvas: #0a0c10;
-  --hero-canvas: #0a0c10;
-  --surface: #101720;
-  --text: #e9edf2;
-  --muted: #a9b5c4;
-  --accent: #4da6ff;
-  --line: #303d4c;
-  --nav-bg: #0a0c10e8;
-  --mesh: #163d60;
-  --mesh-deep: #102736;
-  --overlay: #05080deF;
-  --hero-text: #e9edf2;
-  --hero-muted: #b7c8d9;
-  --hero-line: #3b607a;
-  --hero-accent: #74bdff;
+  --canvas: #080912;
+  --hero-canvas: #080912;
+  --surface: #11131e;
+  --text: #f4f5f8;
+  --muted: #a9adba;
+  --accent: #0b4f8a;
+  --accent-bright: #69b8ff;
+  --line: #282b39;
+  --nav-bg: #080912f2;
+  --mesh: #0b4f8a;
+  --mesh-deep: #07345f;
+  --overlay: #03040ae8;
+  --hero-text: #f4f5f8;
+  --hero-muted: #a9adba;
+  --hero-line: #323646;
+  --hero-accent: #8ac9ff;
   --transparent: transparent;
   /* Type: system fonts only; sizes respond without a build step. */
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --text-xs: 0.8125rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lead: clamp(1.125rem, 2vw, 1.375rem);
   --text-h3: clamp(1.375rem, 3vw, 1.875rem);
   --text-h2: clamp(2rem, 4.8vw, 3.75rem);
-  --text-title: clamp(2.75rem, 7vw, 5.5rem);
-  --text-hero: clamp(2.5rem, 8vw, 6.5rem);
-  --weight-light: 300;
+  --text-title: clamp(2.75rem, 6vw, 5.25rem);
+  --text-hero: clamp(3.25rem, 9vw, 7.75rem);
+  --weight-light: 500;
   --weight-normal: 400;
   --weight-medium: 500;
   --weight-bold: 600;
   --leading-tight: 1.05;
   --leading-heading: 1.15;
   --leading-body: 1.7;
-  --tracking-tight: -0.045em;
-  --tracking-label: 0.12em;
+  --tracking-tight: -0.055em;
+  --tracking-label: 0.08em;
   /* Spacing, dimensions, and rules: use these in main.css. */
   --zero: 0;
   --space-1: 0.25rem;
@@ -59,7 +60,7 @@
   --rule: 1px;
   --focus-width: 2px;
   --focus-offset: 5px;
-  --radius: 0.25rem;
+  --radius: 100vmax;
   --pill: 100vmax;
   --reveal-offset: 20px;
   --drift-x: 1.25rem;
@@ -68,8 +69,8 @@
   --duration-reveal: 600ms;
   --duration-drift: 16000ms;
   --ease: cubic-bezier(0.2, 0.65, 0.3, 1);
-  --hero-height: 53rem;
-  --hero-min-height: 46rem;
+  --hero-height: 50rem;
+  --hero-min-height: 42rem;
   --hero-graphic: 49rem;
   --hero-graphic-mobile: 30rem;
   --hero-graphic-offset: -13rem;
@@ -77,17 +78,4 @@
   --hero-graphic-top-mobile: 9rem;
   --grid-size: 3rem;
   --dialog-width: 68rem;
-}
-/* Light mode changes tokens only; hero retains its deliberate deep-water palette. */
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-    --canvas: #f1f5f8;
-    --surface: #e3ebf1;
-    --text: #142433;
-    --muted: #47596b;
-    --accent: #005fb8;
-    --line: #b8c7d3;
-    --nav-bg: #f1f5f8ed;
-  }
 }

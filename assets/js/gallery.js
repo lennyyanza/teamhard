@@ -17,10 +17,10 @@
   let current = 0;
   let opener = null;
 
-  /* A labeled technical grid replaces missing files without a broken-image icon. */
+  /* A quiet placeholder replaces missing files without a broken-image icon. */
   function imageFrame(item) {
     const frame = element('div', 'blueprint');
-    const fallback = element('span', '', 'Image forthcoming');
+    const fallback = element('span', '', 'No image yet');
     fallback.hidden = true;
     frame.append(localImage(item.src, item.alt, () => { fallback.hidden = false; }), fallback);
     return frame;
@@ -59,7 +59,7 @@
       figure.append(button, element('figcaption', '', item.caption));
       grid.append(figure);
     });
-    count.textContent = `${filtered.length} ${filtered.length === 1 ? 'image' : 'images'} · ${category === 'all' ? 'All categories' : category.toUpperCase()}`;
+    count.textContent = `${filtered.length} ${filtered.length === 1 ? 'entry' : 'entries'} · ${category === 'all' ? 'All categories' : category.toUpperCase()}`;
     if (!filtered.length) grid.append(element('p', 'muted', 'No images in this category yet. Check back as the project develops.'));
     filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
   }

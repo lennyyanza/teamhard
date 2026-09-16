@@ -1,7 +1,7 @@
 /* Team data and portraits live in data/team.json; no HTML editing required. */
 (async () => {
   'use strict';
-  const { readResource, element, markDraft, showError, localImage, safeLink } = window.HARD;
+  const { readResource, element, showError, localImage, safeLink } = window.HARD;
   const container = document.querySelector('#team-grid');
   try {
     const members = await readResource('data/team.json', true);
@@ -15,7 +15,6 @@
       fallback.setAttribute('aria-hidden', 'true');
       portrait.append(fallback, localImage(member.photo, `${member.name} — team portrait`));
       card.append(portrait, element('h2', '', member.name), element('p', 'eyebrow', member.role));
-      markDraft(card, element('p', 'muted', member.bio || member.focus), member.draft);
       const url = safeLink(member.linkedin);
       if (url) {
         const link = element('a', 'profile-link', 'LinkedIn ↗');

@@ -1,26 +1,26 @@
 [
   {
-    "src": "assets/img/gallery/cad.svg",
-    "alt": "Blueprint placeholder for future CAD images",
-    "caption": "CAD & geometry — concept images to come",
+    "src": "",
+    "alt": "No CAD image available yet",
+    "caption": "CAD and body design",
     "category": "cad"
   },
   {
-    "src": "assets/img/gallery/prototype.svg",
-    "alt": "Blueprint placeholder for future prototype photos",
-    "caption": "Propulsion prototype — planned",
+    "src": "",
+    "alt": "No prototype image available yet",
+    "caption": "Prototype development",
     "category": "prototype"
   },
   {
-    "src": "assets/img/gallery/testing.svg",
-    "alt": "Blueprint placeholder for future test photos",
-    "caption": "Simulation & testing — images to come",
+    "src": "",
+    "alt": "No testing image available yet",
+    "caption": "Simulation and testing",
     "category": "testing"
   },
   {
-    "src": "assets/img/gallery/team.svg",
-    "alt": "Blueprint placeholder for future team photos",
-    "caption": "Meet the builders — team photo to come",
+    "src": "",
+    "alt": "No team image available yet",
+    "caption": "Team documentation",
     "category": "team"
   }
 ]
