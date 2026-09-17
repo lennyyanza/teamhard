@@ -8,6 +8,7 @@
     container.replaceChildren();
     members.forEach(member => {
       const card = element('article', 'team-card reveal');
+      card.dataset.member = member.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
       const portrait = element('div', 'portrait');
       const parts = member.name.replace(/"[^"]*"/g, '').trim().split(/\s+/);
       const initials = parts[0][0] + (parts.length > 1 ? parts.at(-1)[0] : '');

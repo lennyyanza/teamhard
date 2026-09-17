@@ -93,6 +93,7 @@ p + p { margin-top: var(--space-5); }
 .team-grid { display: grid; gap: var(--space-8) var(--space-6); }
 .portrait { position: relative; background: var(--surface); aspect-ratio: 4 / 5; display: grid; place-items: center; margin-bottom: var(--space-5); overflow: hidden; border-radius: 1.25rem; }
 .portrait img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: var(--zero); }
+.team-card[data-member="robert-savely"] .portrait img { object-position: center 68%; }
 .initials { font-size: var(--text-title); color: var(--muted); font-weight: var(--weight-light); }
 .team-card .eyebrow { margin: var(--space-3) var(--zero); }
 .team-card .profile-link { display: inline-block; padding-block: var(--space-3); margin-top: var(--space-3); }
