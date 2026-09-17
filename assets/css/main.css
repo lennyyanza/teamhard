@@ -22,16 +22,13 @@ p + p { margin-top: var(--space-5); }
 .skip-link { position: fixed; top: var(--space-4); left: var(--space-4); z-index: 100; padding: var(--space-3) var(--space-5); background: var(--canvas); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
 /* Shared header: all page links are edited in partials/header.html. */
-.site-header { position: fixed; inset: var(--zero) var(--zero) auto; z-index: 20; isolation: isolate; min-height: var(--nav-height); background: var(--nav-bg); border-bottom: var(--rule) solid var(--line); transition: background var(--duration-fast), border-color var(--duration-fast), transform 420ms var(--ease); }
-.home .site-header:not(.is-scrolled):not(.menu-open) { background: var(--transparent); color: var(--text); border-color: var(--transparent); }
-.home .site-header:not(.is-scrolled):not(.menu-open)::before { content: ""; position: absolute; z-index: -1; pointer-events: none; inset: 0 0 -6rem; background: linear-gradient(180deg, rgba(8, 9, 18, 0.98) 0%, rgba(8, 9, 18, 0.86) 30%, rgba(8, 9, 18, 0.5) 62%, rgba(8, 9, 18, 0.16) 84%, transparent 100%); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.9) 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.9) 55%, transparent 100%); }
+.site-header { position: fixed; inset: var(--zero) var(--zero) auto; z-index: 20; isolation: isolate; min-height: var(--nav-height); background: var(--nav-bg); border-bottom: var(--rule) solid var(--line); transition: background var(--duration-fast), border-color var(--duration-fast), opacity 420ms var(--ease); }
+.site-header.is-away { opacity: 0; pointer-events: none; }
+.home .site-header:not(.menu-open) { background: transparent; color: var(--text); border-color: transparent; }
 .site-header.is-scrolled { background: var(--nav-bg); backdrop-filter: blur(var(--space-3)); border-color: var(--line); }
-.home .site-header.is-scrolled { background: transparent; border-color: transparent; backdrop-filter: none; box-shadow: none; }
-.home .site-header.is-scrolled::before { content: ""; position: absolute; z-index: -1; pointer-events: none; inset: 0 0 -7rem; background: linear-gradient(180deg, rgba(8, 9, 18, 0.97) 0%, rgba(8, 9, 18, 0.9) 28%, rgba(8, 9, 18, 0.68) 50%, rgba(8, 9, 18, 0.36) 70%, rgba(8, 9, 18, 0.1) 88%, transparent 100%); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 32%, rgba(0, 0, 0, 0.72) 64%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 32%, rgba(0, 0, 0, 0.72) 64%, transparent 100%); }
+.home .site-header.is-scrolled:not(.menu-open) { background: transparent; border-color: transparent; backdrop-filter: none; box-shadow: none; }
 .nav-shell { min-height: var(--nav-height); display: flex; align-items: center; justify-content: space-between; gap: clamp(2rem, 5vw, 5rem); }
-.brand { position: relative; flex: 0 0 auto; font-size: 1.05rem; font-weight: 700; color: inherit; text-decoration: none; letter-spacing: 0.12em; line-height: 1; }
-.brand::after { content: ""; position: absolute; right: 0; bottom: -0.55rem; width: 2.25rem; height: 2px; background: var(--hero-accent); transform: scaleX(0.32); transform-origin: right; transition: transform 420ms var(--ease); }
-.brand:hover::after, .brand:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+.brand { flex: 0 0 auto; font-size: 1.05rem; font-weight: 700; color: inherit; text-decoration: none; letter-spacing: 0.12em; line-height: 1; }
 .brand span { color: var(--hero-accent); }
 .nav-links { display: grid; gap: var(--space-2); list-style: none; margin: var(--zero); padding: var(--space-4) var(--gutter) var(--space-6); position: absolute; top: 100%; left: var(--zero); width: 100%; max-height: 0; overflow: hidden; visibility: hidden; opacity: 0; transform: translateY(-0.5rem); pointer-events: none; background: var(--canvas); color: var(--text); border-bottom: var(--rule) solid var(--line); transition: max-height 320ms var(--ease), opacity var(--duration-fast), transform var(--duration-fast), visibility var(--duration-fast); }
 .nav-links.is-open { max-height: 28rem; visibility: visible; opacity: 1; transform: translateY(0); pointer-events: auto; }

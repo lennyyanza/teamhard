@@ -73,6 +73,7 @@
       toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
       links.classList.toggle('is-open', open);
       header.classList.toggle('menu-open', open);
+      if (open) header.classList.remove('is-away');
       if (restoreFocus) toggle.focus();
     }
     toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
@@ -90,10 +91,11 @@
     });
     desktop.addEventListener('change', () => setOpen(false));
 
-    /* On home, gain blur after crossing the hero; other pages are always solid. */
+    /* Keep the homepage header clean: it glides away after leaving the top and returns there. */
     function updateScroll() {
       const hero = document.querySelector('.hero');
       header.classList.toggle('is-scrolled', !hero || hero.getBoundingClientRect().bottom <= header.offsetHeight);
+      header.classList.toggle('is-away', window.scrollY > 12 && !header.classList.contains('menu-open'));
     }
     addEventListener('scroll', updateScroll, { passive: true });
     addEventListener('resize', updateScroll);
