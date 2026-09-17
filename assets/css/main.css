@@ -15,7 +15,7 @@ p { max-width: var(--copy-width); }
 p + p { margin-top: var(--space-5); }
 .container { width: min(calc(100% - var(--gutter) * 2), var(--content-width)); margin-inline: auto; }
 .section { padding-block: var(--section-space); }
-.rule { border-top: var(--rule) solid var(--line); }
+.rule { border-top: 0; }
 .eyebrow { color: var(--muted); font: var(--text-xs)/var(--leading-body) var(--mono); font-weight: var(--weight-bold); letter-spacing: var(--tracking-label); text-transform: uppercase; margin-bottom: var(--space-5); }
 .lead { color: var(--muted); font-size: var(--text-lead); margin-top: var(--space-6); }
 .muted { color: var(--muted); }
@@ -70,18 +70,18 @@ p + p { margin-top: var(--space-5); }
 .button-primary { color: #fff; background: var(--accent); border-color: var(--hero-accent); }
 .hero .button { color: var(--hero-text); border-color: var(--hero-line); }
 .hero .button-primary { background: var(--hero-accent); color: var(--hero-canvas); }
-/* Editorial layout: separate content with space and hairline rules. */
+/* Editorial layout: separate content with space and softly surfaced groups. */
 .page-heading { padding-top: calc(var(--nav-height) + var(--section-space)); padding-bottom: var(--section-space); min-height: min(70svh, 44rem); display: flex; flex-direction: column; justify-content: flex-end; }
 .page-heading h1 { font-size: clamp(3.75rem, 9vw, 8rem); line-height: 0.92; max-width: 64rem; }
 .split { display: grid; gap: var(--space-7); }
 .stack > * + * { margin-top: var(--space-6); }
-.feature-grid { display: grid; gap: var(--space-7); margin-top: var(--space-8); }
-.feature-grid article { border-top: var(--rule) solid var(--line); padding-top: var(--space-6); }
+.feature-grid { display: grid; gap: var(--space-5); margin-top: var(--space-8); }
+.feature-grid article { min-height: 100%; padding: var(--space-6); background: linear-gradient(145deg, rgba(20, 24, 38, 0.94), rgba(12, 15, 27, 0.8)); border-radius: 1rem; box-shadow: inset 0 0 0 var(--rule) rgba(138, 201, 255, 0.12); }
 .feature-grid p { color: var(--muted); margin-top: var(--space-4); }
 .number { display: block; color: var(--hero-accent); font: var(--text-sm)/var(--leading-body) var(--mono); margin-bottom: var(--space-6); }
-.requirements { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin: var(--space-7) var(--zero) var(--zero); padding: var(--zero); }
-.requirements li { padding-block: var(--space-3); border-bottom: var(--rule) solid var(--line); }
-.subsystem { padding-block: var(--space-7); border-top: var(--rule) solid var(--line); display: grid; gap: var(--space-6); scroll-margin-top: var(--nav-height); }
+.requirements { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: var(--space-3); margin: var(--space-7) var(--zero) var(--zero); padding: var(--zero); }
+.requirements li { display: flex; align-items: center; min-height: 4.5rem; padding: var(--space-4) var(--space-5); background: var(--surface); border-radius: 0.9rem; box-shadow: inset 0 0 0 var(--rule) rgba(138, 201, 255, 0.13); }
+.subsystem { padding: var(--space-7); background: var(--surface); border-radius: 1rem; box-shadow: inset 0 0 0 var(--rule) rgba(138, 201, 255, 0.1); display: grid; gap: var(--space-6); scroll-margin-top: var(--nav-height); }
 .subsystem p { color: var(--muted); }
 .subsystem .summary { color: var(--text); font-size: var(--text-lead); margin-bottom: var(--space-5); }
 .subsystem-nav { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-6); margin-top: var(--space-7); }
@@ -93,8 +93,8 @@ p + p { margin-top: var(--space-5); }
 .team-card .eyebrow { margin: var(--space-3) var(--zero); }
 .team-card .profile-link { display: inline-block; padding-block: var(--space-3); margin-top: var(--space-3); }
 /* Timeline: statuses include words, so color is never the sole signal. */
-.timeline { list-style: none; padding: var(--zero); margin: var(--zero); }
-.milestone { border-top: var(--rule) solid var(--line); padding-block: var(--space-6); display: grid; gap: var(--space-5); }
+.timeline { list-style: none; padding: var(--zero); margin: var(--zero); display: grid; gap: var(--space-3); }
+.milestone { padding: var(--space-6); background: var(--surface); border-radius: 1rem; box-shadow: inset 0 0 0 var(--rule) rgba(138, 201, 255, 0.1); display: grid; gap: var(--space-5); }
 .milestone p { margin-top: var(--space-3); color: var(--muted); }
 .status { display: inline-block; font: var(--text-sm)/var(--leading-body) var(--mono); color: var(--muted); margin-top: var(--space-3); }
 .status.complete, .status.in-progress { color: var(--hero-accent); }
@@ -120,7 +120,7 @@ p + p { margin-top: var(--space-5); }
 .lightbox-controls { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-5); }
 body.modal-open { overflow: hidden; }
 /* Shared footer and useful empty/error states. */
-.site-footer { border-top: var(--rule) solid var(--line); padding-block: var(--space-7); }
+.site-footer { margin-top: var(--space-6); padding-block: var(--space-7); background: var(--surface); }
 .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-6); }
 .footer-grid p { color: var(--muted); font-size: var(--text-sm); margin-top: var(--space-2); }
 .footer-links { display: flex; flex-wrap: wrap; gap: var(--space-5); align-items: flex-start; font-size: var(--text-sm); }
@@ -157,7 +157,7 @@ body.modal-open { overflow: hidden; }
 .hero.motion-ready .hero-mesh { animation: mesh-drift var(--duration-drift) var(--ease) infinite alternate; }
 .hero.motion-ready .hero-wireframe { animation: wire-drift var(--duration-drift) var(--ease) infinite alternate; }
 .hero.motion-paused .hero-mesh, .hero.motion-paused .hero-wireframe { animation-play-state: paused; }
-.motion-toggle { color: var(--hero-muted); background: var(--transparent); border: var(--zero); padding: var(--zero); min-height: var(--control-size); font-size: var(--text-sm); text-decoration: underline; text-underline-offset: var(--space-1); }
+.motion-toggle { color: var(--hero-muted); background: var(--transparent); border: var(--zero); padding: var(--zero); min-height: var(--control-size); font-size: var(--text-sm); text-decoration: none; }
 .hero-meta { align-items: center; }
 
 /* Keep links and keyboard focus legible over the dark hero in either palette. */
